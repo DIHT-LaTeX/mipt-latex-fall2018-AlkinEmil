@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\usepackage [
+	paperwidth = 148 mm, 
+	paperheight = 210 mm, 
+	left = 1 cm, 
+	right = 1 cm, 
+	top = 1 cm, 
+	bottom = 1 cm
+]{geometry}
+%\usepackage{showframe}
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}	
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\begin{document}
+\newtheorem{definition}{Определение}
+\newtheorem{thm}{Теорема}[section]
+\newenvironment{problem}[1]{}{}
+	\section{Центральная предельная теорема}
+	\begin{thm}[Линдеберга]
+	Пусть $\{\xi_k\}_{k\geq1}$ --- независивые случайные величины, $\mathsf{E}\xi_k^2<+\infty$ $\forall k$, обозначим $m_k = \mathsf{E}\xi_k$ , $\delta_k^2 = \mathsf{D}\xi_k > 0 : S_n = \sum\limits_{i = 0}^n \xi_i $ ; $\mathsf{D}_n^2 = \sum\limits_{k = 1}^n \delta_k^2$ и $F_k(x)$ --- ф.р. $\xi_k$. Пусть выполнено условие Линдеберга, то есть
+  	$$\forall\mathcal{E}>0 \frac{1}{\mathsf{D}_n^2} \sum  \limits_{k = 1}^n \int \limits_{\{x:|x-m_k|>\mathcal{E} \mathsf{D}_n\}} (x-m_k)^2 \, dx \xrightarrow[n\rightarrow\infty]{}0.$$ 
+  	Тогда $\frac{S_n-ES_n}{\sqrt{DS_n}}\xrightarrow{d} \mathcal{N}(0,1), n\rightarrow\infty.$
+	\end{thm}
+	\section{Гауссовские случайные векторы}
+	\begin{definition}
+	Случайный вектор $\vec{\xi}$ --- гауссовский, если его характеристическая функция 
+	$\varphi_{\vec{\xi}} (\vec{t}) = \exp(i(\vec{m}, \vec{t}) - \frac{1}{2}(\Sigma \vec{t},\vec{t})), \vec{m}\in\mathbb{R}^n, \Sigma$ --- симметрическая неотрицательно определенная матрица.
+	\end{definition}
+
+	\begin{definition}
+	Случайный вектор $\vec{\xi}$ --- гауссовский, если он представляется в следующем виде: 
+	$\vec{\xi} = A\vec{\eta} + \vec{b}$, где $\vec{b} \in \mathbb{R}^n$, $A\in \text{Mat}(n\times m)$ и $\vec{\eta} = (\eta_1, \dots , \eta_m)$ --- независимые и $\mathcal{N}(0,1)$.
+	\end{definition}
+	
+	\begin{definition}
+	Случайный вектор $\vec{\xi}$ --- гауссовский, если $\forall\lambda\in\mathbb{R}^n$ случайная величина $(\vec{\lambda},\vec{\xi})$ имеют нормальное распределение.
+	\end{definition}
+	
+	\begin{thm}[об эквивалентности определений гауссовских векторов]
+	Предыдущие три определения эквивалентны.
+	\end{thm}
+    \section{Задачи по астрономии}
+\end{document}
